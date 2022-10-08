@@ -1,0 +1,23 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.logoContainer {
+    margin-bottom: 7px;
+}
+
+    .logoContainer img {
+        object-fit: contain;
+        height: 55px;
+    }
