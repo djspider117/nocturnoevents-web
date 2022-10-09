@@ -1,3 +1,5 @@
+using NocturnoWeb.Data;
+
 namespace NocturnoWeb
 {
     public class Program
@@ -8,6 +10,7 @@ namespace NocturnoWeb
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<EventsService>();
 
             var app = builder.Build();
 

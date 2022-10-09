@@ -21,3 +21,33 @@ html {
         object-fit: contain;
         height: 55px;
     }
+
+.event-item {
+    list-style-type: none;
+    background: rgba(255,255,255,0.1);
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+    .event-item img{
+        height: 220px;
+        width: 220px;
+    }
+
+.event-link {
+    padding: 0px;
+}
+
+.event-details {
+    margin: 10px;
+}
+
+.event-location {
+    margin: 0;
+    padding: 0;
+}
+
+.event-tickets-button {
+    bottom: 15px !important;
+    right: 15px !important;
+}
