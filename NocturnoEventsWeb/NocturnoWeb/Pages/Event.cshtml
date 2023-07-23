@@ -4,11 +4,11 @@
 @{
     if (Model.Event.CoverUri != null)
     {
-        <img class="bgImage" src="@Model.Event.CoverUri" />
+        <img class="bgImage blur5" src="@Model.Event.CoverUri" />
     }
     else
     {
-        <img class="bgImage" src="~/img/events_bg.jpg" />
+        <img class="bgImage blur5" src="~/img/events_bg.jpg" />
     }
 }
 
@@ -34,7 +34,44 @@
         </div>
 
         <div class="details">
+            <hr class="mb-stroke" />
+            <h3>EVENT INFO</h3>
+            <hr class="subline" />
 
+            <table>
+                <tr>
+                    <td>Date:</td>
+                    <td>@Model.Event.DateTime.ToLongDateString()</td>
+                </tr>
+                <tr>
+                    <td>Time:</td>
+                    <td>@Model.Event.DateTime.ToShortTimeString()</td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td>@Model.Event.VenueName</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>@Model.Event.VenueAddress</td>
+                </tr>
+                @* <tr>
+                <td>Artists</td>
+                <td>
+
+                </td>
+                </tr>*@
+            </table>
+
+            @if (Model.Event.TicketsUrl != null)
+            {
+                <a href="@Model.Event.TicketsUrl" class="details-button">BUY TICKET</a>
+            }
+
+
+            <p>
+                @Model.Event.Description
+            </p>
         </div>
     </div>
 

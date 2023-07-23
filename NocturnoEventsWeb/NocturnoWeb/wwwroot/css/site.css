@@ -26,6 +26,14 @@ html {
         height: 42px;
     }
 
+.blur10 {
+    filter: blur(10px);
+}
+
+.blur5 {
+    filter: blur(5px);
+}
+
 .fa {
     padding: 10px;
 }
@@ -224,6 +232,8 @@ nav {
     justify-content: center;
     align-items: center;
     grid-area: f;
+    text-decoration: none;
+    color: white;
 }
 
     .featured-artists .featured-artists-content .view-all h3 {
@@ -319,6 +329,7 @@ h1 {
 .page {
     margin-top: 150px;
 }
+
     .page h1 {
         font-size: 70px;
         margin-bottom: 30px;
@@ -506,7 +517,6 @@ h1 {
     transform: translate3d(0px, 0px, 0px);
     backface-visibility: hidden;
     perspective: 1000px;
-    filter: blur(0px);
     position: fixed;
 }
 
@@ -540,7 +550,7 @@ h1 {
         bottom: 20px;
         right: 10px;
         width: 100%;
-        position:absolute;
+        position: absolute;
         text-align: right;
         font-weight: bold;
         text-transform: uppercase;
@@ -574,3 +584,49 @@ h1 {
 .artist-video iframe {
     width: 100%;
 }
+
+
+.details-container {
+    display: grid;
+    grid-template-columns: 500px auto;
+}
+
+    .details-container .details {
+        margin-left: 20px;
+    }
+
+    .details-container .details-button {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .details-container .details h3 {
+        font-family: Montserrat;
+        letter-spacing: 2px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .details-container .details .subline {
+        width: 100px;
+    }
+
+    .details-container .details table {
+        width: 100%;
+        font-family: Montserrat;
+    }
+
+        .details-container .details table tr {
+            line-height: 40px;
+        }
+
+            .details-container .details table tr td:first-child {
+                color: white;
+                font-weight: bold;
+            }
+
+    .details-container .poster-container img {
+        width: 500px;
+        object-fit: cover;
+    }
