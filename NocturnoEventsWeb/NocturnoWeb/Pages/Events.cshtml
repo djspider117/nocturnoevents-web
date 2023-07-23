@@ -1,33 +1,42 @@
 ﻿@page
 @model NocturnoWeb.Pages.EventsModel
-@{
-}
-<div class="text-center">
-    <h1 class="display-4">Events</h1>
 
-    <div class="row">
-        <ul class="container">
-            @{
-                foreach (var item in Model.Events)
-                {
-                    <li class="event-item row">
-                        <a class="event-link col-sm-auto" href="@item.TicketsUrl" target="_blank">
-                            <img class="event-image" src="@item.ThumbnailSource" />
-                        </a>
-                        <div class="event-details col-sm-auto">
-                            <h3 class="event-title">@item.Name @@ @item.VenueName</h3>
-                            <div class="event-address">@item.VenueAddress</div>
-                            <div class="event-date">@item.DateTime.ToLongDateString() , @item.DateTime.ToShortTimeString()</div>
-                            <a class="event-location" href="https://www.google.com/maps/@@@item.VenueLocation.X,@item.VenueLocation.Y,19z">See on Google Maps</a>
-                        </div>
-                        <div class="col position-relative">
-                            <div class="position-absolute event-tickets-button">
-                                <a href="@item.TicketsUrl" class="btn btn-primary" target="_blank">Buy Tickets</a>
-                            </div>
-                        </div>
-                    </li>
-                }
+<img id="eventsBgImage" src="~/img/dj-consolle-dj-1024x682.jpg" />
+<div id="bgGradient">
+    <div id="dots"></div>
+</div>
+
+<div class="events-page">
+    <h1>EVENT CALENDAR</h1>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <div>
+        @{
+            foreach (var evt in Model.Events)
+            {
+                <div class="event-row">
+                    <h4 class="dateblock">
+                        <span class="evt-day">@evt.DateTime.Day</span>
+                        <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
+                    </h4>
+
+                    <div class="text">
+                        <h2>@evt.Name</h2>
+                        <h4>@evt.VenueName</h4>
+                        <h4>@evt.VenueAddress</h4>
+                    </div>
+
+                    <img src="@evt.ThumbnailSource" />
+                </div>
             }
-        </ul>
+        }
+        </>
     </div>
 </div>
