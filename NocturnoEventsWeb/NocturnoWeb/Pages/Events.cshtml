@@ -1,10 +1,42 @@
 ﻿@page
 @model NocturnoWeb.Pages.EventsModel
-@{
-}
-<div class="text-center">
-    <h1 class="display-4">Events</h1>
 
-    <h2>Nothing yet. Check back soon.</h2>
-    <h4>For inquiries, contact <a href="mailto:office@nocturnoevents.ro">office@@nocturnoevents.ro</a></h4>
+<img id="eventsBgImage" src="~/img/dj-consolle-dj-1024x682.jpg" />
+<div id="bgGradient">
+    <div id="dots"></div>
+</div>
+
+<div class="events-page">
+    <h1>EVENT CALENDAR</h1>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <div>
+        @{
+            foreach (var evt in Model.Events)
+            {
+                <div class="event-row">
+                    <h4 class="dateblock">
+                        <span class="evt-day">@evt.DateTime.Day</span>
+                        <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
+                    </h4>
+
+                    <div class="text">
+                        <h2>@evt.Name</h2>
+                        <h4>@evt.VenueName</h4>
+                        <h4>@evt.VenueAddress</h4>
+                    </div>
+
+                    <img src="@evt.ThumbnailSource" />
+                </div>
+            }
+        }
+        </>
+    </div>
 </div>
