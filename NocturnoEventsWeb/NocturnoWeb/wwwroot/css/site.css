@@ -316,9 +316,15 @@ h1 {
 
 /*-------------EVENTS-------------*/
 
-.events-page {
+.page {
     margin-top: 150px;
 }
+    .page h1 {
+        font-size: 70px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
 
 .event-row {
     border-top: gray 6px solid;
@@ -367,11 +373,6 @@ h1 {
         height: 106px;
         object-fit: cover;
     }
-
-.events-page h1 {
-    font-size: 70px;
-    margin-bottom: 30px;
-}
 
 
 .events-container {
@@ -487,7 +488,7 @@ h1 {
         background: var(--Accent1);
     }
 
-#eventsBgImage {
+.bgImage {
     position: absolute;
     z-index: -2400;
     width: 100vw;
@@ -500,7 +501,7 @@ h1 {
     position: fixed;
 }
 
-#bgGradient {
+.bgGradient {
     width: 100vw;
     height: 100vh;
     left: 0;
@@ -511,9 +512,56 @@ h1 {
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(36, 36, 45) 60%);
 }
 
-#dots {
+.dots {
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(black 1px, transparent 0);
+    background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0);
     background-size: 3px 3px;
+}
+
+.artists-container {
+    display: grid;
+    margin-top: 20px;
+    gap: 13px;
+    grid-template-columns: auto auto auto;
+}
+
+    .artists-container .evt-day {
+        font-size: 40px;
+        bottom: 20px;
+        right: 10px;
+        width: 100%;
+        position:absolute;
+        text-align: right;
+        font-weight: bold;
+        text-transform: uppercase;
+        user-select: none;
+        color: white;
+    }
+
+.artist-image {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.subline {
+    height: 6px;
+    background: var(--Accent1);
+    width: 60px;
+    margin-left: 0;
+    border: none;
+}
+
+.artist-page {
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+
+.artist-details {
+    margin-left: 60px;
+}
+
+.artist-video iframe {
+    width: 100%;
 }
