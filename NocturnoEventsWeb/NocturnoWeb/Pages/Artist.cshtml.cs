@@ -20,14 +20,7 @@ namespace NocturnoWeb.Pages
                 ImageUri = "https://static.wixstatic.com/media/f482ab_fea98be3ed4f48c0b1ea134f2d1dafca~mv2.jpg/v1/fill/w_1000,h_751,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f482ab_fea98be3ed4f48c0b1ea134f2d1dafca~mv2.jpg",
                 LogoUri = "https://storage.rcs-rds.ro/content/links/72a768f0-4076-4ac8-5c1d-2a6ffc9660fe/files/get/logo_white.png?path=%2Flogo_white.png",
                 Video = "https://www.youtube.com/embed/Fz4SNnj8gRI",
-                SocialLinks = new List<string>
-                    {
-                        "https://www.facebook.com/djjspider",
-                        "https://www.youtube.com/@johnspider",
-                        "https://soundcloud.com/johnspidermusic",
-                        "https://www.instagram.com/johnspidermusic/",
-                        "https://www.beatport.com/artist/john-spider/769557",
-                    }
+                DbSocialLinks = "https://www.facebook.com/djjspider,https://www.youtube.com/@johnspider,https://soundcloud.com/johnspidermusic,https://www.instagram.com/johnspidermusic/,https://www.beatport.com/artist/john-spider/769557"
             };
         }
     }

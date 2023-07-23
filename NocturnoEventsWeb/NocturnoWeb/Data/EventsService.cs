@@ -18,8 +18,7 @@ namespace NocturnoWeb.Data
                     TicketsUrl = "https://picsum.photos/600/600?random=12",
                     ThumbnailSource = "https://picsum.photos/600/600?random=11762",
                     VenueName = "ARCU, House of Beer",
-                    VenueAddress = "Iași, Strada Arcu, nr. 18",
-                    VenueLocation = new Vector2(47.1670349f,27.575463f),
+                    VenueAddress = "Iași, Strada Arcu, nr. 18"
                 },
                 new Event
                 {
@@ -29,8 +28,7 @@ namespace NocturnoWeb.Data
                     TicketsUrl = "https://picsum.photos/600/600?random=152",
                     ThumbnailSource = "https://picsum.photos/600/600?random=142",
                     VenueName = "ARCU, House of Beer",
-                    VenueAddress = "Iași, Strada Arcu, nr. 18",
-                    VenueLocation = new Vector2(47.1670349f,27.575463f),
+                    VenueAddress = "Iași, Strada Arcu, nr. 18"
                 },
                 new Event
                 {
@@ -40,27 +38,12 @@ namespace NocturnoWeb.Data
                     TicketsUrl = "https://picsum.photos/600/600?random=1232",
                     ThumbnailSource = "https://picsum.photos/600/600?random=122",
                     VenueName = "ARCU, House of Beer",
-                    VenueAddress = "Iași, Strada Arcu, nr. 18",
-                    VenueLocation = new Vector2(47.1670349f,27.575463f),
+                    VenueAddress = "Iași, Strada Arcu, nr. 18"
                 },
             };
         }
 
         public Task<List<Event>> GetEventsAsync() => Task.FromResult(_events);
 
-    }
-
-    public class Event
-    {
-        public string ThumbnailSource { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime DateTime { get; set; }
-
-        public string VenueName { get; set; }
-        public string VenueAddress { get; set; }
-        public Vector2 VenueLocation { get; set; }
-
-        public string TicketsUrl { get; set; }
     }
 }
