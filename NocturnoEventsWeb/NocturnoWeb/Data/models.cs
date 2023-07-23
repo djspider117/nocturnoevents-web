@@ -21,5 +21,6 @@
         public string Video { get; set; }
         public List<string> SocialLinks { get; set; }
         public string CoverUri { get; set; }
+        public string StyleLine { get; set; }
     }
 }

@@ -18,6 +18,7 @@
 
 <div class="page">
     <h1>@Model.Artist.Name</h1>
+    <h5>@Model.Artist.StyleLine</h5>
 
     <div class="graphic">
         <div class="deco"></div>
@@ -35,7 +36,7 @@
             <h2>
                 BIOGRAPHY
 
-                <span class="social-links" style="float:right"> 
+                <span class="social-links" style="float:right">
                     @foreach (var linkUri in Model.Artist.SocialLinks)
                     {
                         if (linkUri.Contains("facebook"))
@@ -80,7 +81,7 @@
                 <h2>VIDEO</h2>
                 <hr class="subline" />
 
-                <iframe height="485" src="@Model.Artist.Video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe height="685" src="@Model.Artist.Video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         }
     }
