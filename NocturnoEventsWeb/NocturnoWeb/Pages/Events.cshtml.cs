@@ -10,7 +10,8 @@ namespace NocturnoWeb.Pages
     {
         private readonly EventsService _eventsService;
 
-        public List<Event> Events { get; set; }
+        public List<Event> PastEvents { get; set; }
+        public List<Event> FutureEvents { get; set; }
 
         public EventsModel(EventsService eventsService)
         {
@@ -19,7 +20,8 @@ namespace NocturnoWeb.Pages
 
         public async Task OnGet()
         {
-            Events = await _eventsService.GetEventsAsync();
+            PastEvents = await _eventsService.GetEventsAsync();
+            FutureEvents = await _eventsService.GetFutureEventsAsync();
         }
     }
 

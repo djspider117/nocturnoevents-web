@@ -31,8 +31,9 @@ namespace NocturnoWeb.Services
                 {
                     Name = "Crainicu",
                     StyleLine = "hard techno//trance",
-                    Bio = "Techno producer and DJ.",
-                    ImageUri = "https://crainicu.com/assets/images/crainicu.jpg",
+                    Bio = "Crainicu is a passionate Techno DJ and producer who has been devoted to electronic music since 2008. With a focus on mixing since 2020, he has developed a signature sound based on Acid and high energy performances that were heard in cities like Bucharest, Iasi and Timisoara. \r\nIn addition to his techno sets, he has also lent his talents to the Romanian Trance Family, performing sets for their weekly radioshow on Trance Energy Radio. With a love for the genre that shines through in every beat, he is a rising star in the world of electronic music.",
+                    CoverUri = "https://scontent.fias1-1.fna.fbcdn.net/v/t39.30808-6/335294108_175049155297957_1944003770819148287_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=rd2Y_ZS3wvkAX-53JuH&_nc_ht=scontent.fias1-1.fna&oh=00_AfCEn1nl-MxUgbkeB-kKZmi5ITi1GhB76zZXgz_m_zQsbQ&oe=64C34CA4",
+                    ImageUri = "https://scontent.fias1-1.fna.fbcdn.net/v/t39.30808-6/327154007_3457678767889632_389392511855682412_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=vptIy3WBWxUAX-HfP3A&_nc_ht=scontent.fias1-1.fna&oh=00_AfCKd1tIhiLPGIRQYyqvI908YaZ6p784zDX8-G13YT12ew&oe=64C30732",
                     LogoUri = "https://crainicu.com/assets/images/crainicu_white.png",
                     Video = "https://www.youtube.com/embed/bffbQEvs94E",
                     DbSocialLinks =  "https://www.facebook.com/crainicu,https://www.instagram.com/crainicu_/,https://www.youtube.com/c/Crainicu"

@@ -539,11 +539,12 @@ h1 {
 }
 
 .artists-container {
-    display: grid;
+    display: flex;
     margin-top: 20px;
-    gap: 13px;
-    grid-template-columns: auto auto auto;
 }
+    .artists-container .event-item {
+        margin-right: 30px;
+    }
 
     .artists-container .evt-day {
         font-size: 40px;
@@ -630,3 +631,10 @@ h1 {
         width: 500px;
         object-fit: cover;
     }
+
+.no-events {
+    text-align: center;
+    font-family: Montserrat;
+    margin-bottom: 60px;
+    font-size: 25px;
+}
