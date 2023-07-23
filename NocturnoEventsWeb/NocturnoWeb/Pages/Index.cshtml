@@ -4,9 +4,73 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Nocturno Events</h1>
+<div id="intro-card">
+    <h1>EVENTS</h1>
 
-    <h2>Site under construction. More coming sooon.</h2>
-    <h4>For inquiries, contact <a href="mailto:office@nocturnoevents.ro">office@@nocturnoevents.ro</a></h4>
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <hr class="mb-stroke" />
+
+    <div class="events-container">
+        @{
+            foreach (var evt in Model.Events)
+            {
+                <div class="event-item">
+                    <div class="preview-container">
+                        <img src="@evt.ThumbnailSource" />
+                        <h2>
+                            <span class="evt-day">@evt.DateTime.Day</span>
+                            <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
+                        </h2>
+                    </div>
+                    <div class="evt-title">
+                        <h3>@evt.Name</h3>
+                        <h4>@evt.VenueName</h4>
+                    </div>
+                    <div class="evt-desc">
+                        @evt.Description
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <button>SEE MORE</button>
+</div>
+
+<div id="featured-artists" class="featured-artists">
+    <h1>FEATURED ARTISTS</h1>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <div class="featured-artists-content">
+
+        @{
+            int i = 0;
+            foreach (var item in Model.FeaturedArtists)
+            {
+                <div class="item item-@i">
+                    <img src="@item.ImageUri" />
+                    <h4>@item.Name</h4>
+                </div>
+                i++;
+            }
+        }
+
+        <div class="item view-all">
+            <h3>VIEW ALL</h3>
+        </div>
+    </div>
 </div>
