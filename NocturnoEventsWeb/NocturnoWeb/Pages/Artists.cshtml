@@ -3,7 +3,7 @@
 @{
 }
 
-<img class="bgImage" src="~/img/original-2-1024x576.jpg" />
+<img class="bgImage blur5" src="~/img/original-2-1024x576.jpg" />
 <div class="bgGradient">
     <div class="dots"></div>
 </div>
@@ -25,7 +25,7 @@
             {
                 <a class="event-item" href="/Artist/@evt.Id">
                     <div class="preview-container">
-                        <img src="@evt.ImageUri" />
+                        <img src="@(evt.CoverUri ?? evt.ImageUri)" />
                         <h2>
                             <span class="evt-day">@evt.Name</span>
                         </h2>

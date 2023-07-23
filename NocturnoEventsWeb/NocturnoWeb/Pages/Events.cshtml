@@ -1,13 +1,13 @@
 ﻿@page
 @model NocturnoWeb.Pages.EventsModel
 
-<img class="bgImage" src="~/img/dj-consolle-dj-1024x682.jpg" />
+<img class="bgImage blur5" src="~/img/dj-consolle-dj-1024x682.jpg" />
 <div class="bgGradient">
     <div class="dots"></div>
 </div>
 
 <div class="page">
-    <h1>EVENT CALENDAR</h1>
+    <h1>UPCOMING CALENDAR</h1>
 
     <div class="graphic">
         <div class="deco"></div>
@@ -19,22 +19,65 @@
 
     <div>
         @{
-            foreach (var evt in Model.Events)
+            if (Model.FutureEvents.Count == 0)
             {
-                <div class="event-row">
-                    <h4 class="dateblock">
-                        <span class="evt-day">@evt.DateTime.Day</span>
-                        <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
-                    </h4>
+                <div class="no-events">No upcoming events yet. Watch this space!</div>
+            }
+            else
+            {
+                foreach (var evt in Model.FutureEvents)
+                {
+                    <a href="/Event/@evt.Id" style="text-decoration: none; transition: 0.4s">
+                        <div class="event-row">
+                        <h4 class="dateblock">
+                            <span class="evt-day">@evt.DateTime.Day</span>
+                            <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
+                        </h4>
 
-                    <div class="text">
-                        <h2>@evt.Name</h2>
-                        <h4>@evt.VenueName</h4>
-                        <h4>@evt.VenueAddress</h4>
+                        <div class="text">
+                            <h2>@evt.Name</h2>
+                            <h4>@evt.VenueName</h4>
+                            <h4>@evt.VenueAddress</h4>
+                        </div>
+
+                        <img src="@evt.PosterUri" />
                     </div>
+                </a>
+            }
+            }
+        }
+        </>
+    </div>
 
-                    <img src="@evt.PosterUri" />
-                </div>
+    <h1>PAST EVENTS</h1>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+    <div>
+        @{
+            foreach (var evt in Model.PastEvents)
+            {
+                <a href="/Event/@evt.Id" style="text-decoration: none; transition: 0.4s">
+                    <div class="event-row">
+                        <h4 class="dateblock">
+                            <span class="evt-day">@evt.DateTime.Day</span>
+                            <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
+                        </h4>
+
+                        <div class="text">
+                            <h2>@evt.Name</h2>
+                            <h4>@evt.VenueName</h4>
+                            <h4>@evt.VenueAddress</h4>
+                        </div>
+
+                        <img src="@evt.PosterUri" />
+                    </div>
+                </a>
             }
         }
         </>
