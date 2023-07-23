@@ -9,15 +9,17 @@ namespace NocturnoWeb.Data
 
         public DbSet<EventArtistMapping> EventArtistMapping { get; set; }
 
-        public string DbPath { get; }
-
         public NocturnoDbContext()
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-            DbPath = Path.Join(path, "nocturno.db");
+
         }
+
+        public NocturnoDbContext(DbContextOptions<NocturnoDbContext> options) : base(options)
+        {
+
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite($"Data Source={DbPath}");
+            => options.UseSqlite($"Data Source=nocturno.db");
     }
 }

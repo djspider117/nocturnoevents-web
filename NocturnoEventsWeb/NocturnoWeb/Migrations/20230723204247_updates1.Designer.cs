@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NocturnoWeb.Data;
 
@@ -10,9 +11,11 @@ using NocturnoWeb.Data;
 namespace NocturnoWeb.Migrations
 {
     [DbContext(typeof(NocturnoDbContext))]
-    partial class NocturnoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230723204247_updates1")]
+    partial class updates1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.9");

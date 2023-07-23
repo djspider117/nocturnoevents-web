@@ -5,7 +5,8 @@ namespace NocturnoWeb.Data
     public class Event
     {
         public int Id { get; set; }
-        public string ThumbnailSource { get; set; }
+        public string CoverUri { get; set; }
+        public string PosterUri { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime DateTime { get; set; }
