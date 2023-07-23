@@ -3,6 +3,11 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<img class="bgImage" src="~/img/home-bg-space.jpg" />
+<div class="bgGradient">
+    <div class="dots"></div>
+</div>
+
 
 <div id="events-card">
     <h1>EVENTS</h1>
@@ -23,7 +28,7 @@
             {
                 <div class="event-item">
                     <div class="preview-container">
-                        <img src="@evt.ThumbnailSource" />
+                        <img src="@evt.PosterUri" />
                         <h2>
                             <span class="evt-day">@evt.DateTime.Day</span>
                             <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>

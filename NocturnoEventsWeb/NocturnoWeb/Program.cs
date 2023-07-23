@@ -1,4 +1,5 @@
 using NocturnoWeb.Data;
+using NocturnoWeb.Services;
 
 namespace NocturnoWeb
 {
@@ -10,7 +11,12 @@ namespace NocturnoWeb
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddSingleton<EventsService>();
+
+            builder.Services.AddTransient<EventsService>();
+            builder.Services.AddTransient<ArtistsService>();
+
+            builder.Services.AddDbContext<NocturnoDbContext>()
+                            .AddSqlite<NocturnoDbContext>($"Data Source=nocturno.db");
 
             var app = builder.Build();
 

@@ -1,0 +1,88 @@
+﻿@page "{id}"
+@model NocturnoWeb.Pages.ArtistModel
+@{
+    if (Model.Artist.CoverUri != null)
+    {
+        <img class="bgImage" src="@Model.Artist.CoverUri" />
+    }
+    else
+    {
+        <img class="bgImage" src="~/img/original-2-1024x576.jpg" />
+    }
+}
+
+<div class="bgGradient">
+    <div class="dots"></div>
+</div>
+
+
+<div class="page">
+    <h1>@Model.Artist.Name</h1>
+    <h5>@Model.Artist.StyleLine</h5>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <div class="artist-page">
+        <img class="artist-image" src="@Model.Artist.ImageUri" />
+
+
+        <div class="artist-details">
+            <h2>
+                BIOGRAPHY
+
+                <span class="social-links" style="float:right">
+                    @foreach (var linkUri in Model.Artist.SocialLinks)
+                    {
+                        if (linkUri.Contains("facebook"))
+                        {
+                            <a href="@linkUri" class="fa fa-facebook nav-link"></a>
+                        }
+                        if (linkUri.Contains("instagram"))
+                        {
+                            <a href="@linkUri" class="fa fa-instagram nav-link"></a>
+                        }
+                        if (linkUri.Contains("youtube"))
+                        {
+                            <a href="@linkUri" class="fa fa-youtube nav-link"></a>
+                        }
+                        if (linkUri.Contains("soundcloud"))
+                        {
+                            <a href="@linkUri" class="fa fa-soundcloud nav-link"></a>
+                        }
+
+                        // TODO: add support for beatport/mixcloud, etc
+                    }
+
+                </span>
+            </h2>
+            <hr class="subline" />
+
+            <div class="text">
+                @foreach (var para in Model.Artist.Bio.Split("\r\n"))
+                {
+                    <p>
+                        @para
+                    </p>
+                }
+            </div>
+        </div>
+
+    </div>
+    @{
+        if (Model.Artist.Video != null)
+        {
+            <div class="artist-video">
+                <h2>VIDEO</h2>
+                <hr class="subline" />
+
+                <iframe height="685" src="@Model.Artist.Video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        }
+    }
+</div>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NocturnoWeb.Data;
+using NocturnoWeb.Services;
 
 namespace NocturnoWeb.Pages
 {

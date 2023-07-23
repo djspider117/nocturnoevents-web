@@ -1,0 +1,41 @@
+﻿@page "{id}"
+@model NocturnoWeb.Pages.EventModel
+
+@{
+    if (Model.Event.CoverUri != null)
+    {
+        <img class="bgImage" src="@Model.Event.CoverUri" />
+    }
+    else
+    {
+        <img class="bgImage" src="~/img/events_bg.jpg" />
+    }
+}
+
+<div class="bgGradient">
+    <div class="dots"></div>
+</div>
+
+<div class="page">
+    <h1>@Model.Event.Name</h1>
+    <h5>@Model.Event.DateTime.ToLongDateString() // @Model.Event.VenueName</h5>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <div class="details-container">
+        <div class="poster-container">
+            <img src="@Model.Event.PosterUri" />
+        </div>
+
+        <div class="details">
+
+        </div>
+    </div>
+
+</div>

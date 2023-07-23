@@ -1,0 +1,37 @@
+﻿@page
+@model NocturnoWeb.Pages.ArtistsModel
+@{
+}
+
+<img class="bgImage" src="~/img/original-2-1024x576.jpg" />
+<div class="bgGradient">
+    <div class="dots"></div>
+</div>
+
+<div class="page">
+    <h1>ARTISTS</h1>
+
+    <div class="graphic">
+        <div class="deco"></div>
+        <div class="anim-0"></div>
+        <div class="anim-1"></div>
+        <div class="anim-2"></div>
+        <div class="deco"></div>
+    </div>
+
+    <div class="artists-container">
+        @{
+            foreach (var evt in Model.Artists)
+            {
+                <a class="event-item" href="/Artist/@evt.Id">
+                    <div class="preview-container">
+                        <img src="@evt.ImageUri" />
+                        <h2>
+                            <span class="evt-day">@evt.Name</span>
+                        </h2>
+                    </div>
+                </a>
+            }
+        }
+    </div>
+</div>

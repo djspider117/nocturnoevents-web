@@ -1,12 +1,12 @@
 ﻿@page
 @model NocturnoWeb.Pages.EventsModel
 
-<img id="eventsBgImage" src="~/img/dj-consolle-dj-1024x682.jpg" />
-<div id="bgGradient">
-    <div id="dots"></div>
+<img class="bgImage" src="~/img/dj-consolle-dj-1024x682.jpg" />
+<div class="bgGradient">
+    <div class="dots"></div>
 </div>
 
-<div class="events-page">
+<div class="page">
     <h1>EVENT CALENDAR</h1>
 
     <div class="graphic">
@@ -33,7 +33,7 @@
                         <h4>@evt.VenueAddress</h4>
                     </div>
 
-                    <img src="@evt.ThumbnailSource" />
+                    <img src="@evt.PosterUri" />
                 </div>
             }
         }
