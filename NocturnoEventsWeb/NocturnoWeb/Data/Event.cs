@@ -15,5 +15,8 @@ namespace NocturnoWeb.Data
         public string VenueAddress { get; set; }
 
         public string TicketsUrl { get; set; }
+
+        public string MapsUri { get; set; }
+        public string MapEmbedding { get; set; }
     }
 }

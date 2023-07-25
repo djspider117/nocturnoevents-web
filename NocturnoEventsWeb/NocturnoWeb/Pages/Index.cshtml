@@ -9,6 +9,19 @@
 </div>
 
 
+<div class="landing">
+    <div class="text">WE ARE NOCTURNO</div>
+    <div class="latestEvent">
+        <a href="/Event/@Model.LatestEvent.Id">
+            <img src="@Model.LatestEvent.CoverUri" />
+            <h3>
+                <span>@Model.LatestEvent.Name</span>
+                <span>@Model.LatestEvent.VenueName</span>
+            </h3>
+        </a>
+    </div>
+</div>
+
 <div id="events-card">
     <h1>EVENTS</h1>
 
@@ -28,19 +41,21 @@
             {
                 <div class="event-item">
                     <div class="preview-container">
-                        <img src="@evt.PosterUri" />
+                        <img src="@evt.PosterUri"></img>
                         <h2>
                             <span class="evt-day">@evt.DateTime.Day</span>
                             <span class="evt-year">@evt.DateTime.ToString("MMM yyyy")</span>
                         </h2>
                     </div>
                     <div class="evt-title">
-                        <h3>@evt.Name</h3>
-                        <h4>@evt.VenueName</h4>
+                        <a href="/Event/@evt.Id">
+                            <h3>@evt.Name</h3>
+                            <h4>@evt.VenueName</h4>
+                        </a>
                     </div>
-                    <div class="evt-desc">
-                        @evt.Description
-                    </div>
+                    @*<div class="evt-desc">
+            @evt.Description
+            </div>*@
                 </div>
             }
         }

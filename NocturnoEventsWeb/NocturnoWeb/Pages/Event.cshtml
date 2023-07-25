@@ -53,16 +53,16 @@
                 </tr>
                 <tr>
                     <td>Address:</td>
-                    <td>@Model.Event.VenueAddress</td>
-                </tr>
-                @* <tr>
-                <td>Artists</td>
-                <td>
+                    <td><a href="@Model.Event.MapsUri"> @Model.Event.VenueAddress</a></td>
+                    @* <tr>
+                    <td>Artists</td>
+                    <td>
 
-                </td>
-                </tr>*@
+                    </td>
+                    </tr>*@
             </table>
 
+            <iframe src="@Model.Event.MapEmbedding" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             @if (Model.Event.TicketsUrl != null)
             {
                 <a href="@Model.Event.TicketsUrl" class="details-button">BUY TICKET</a>

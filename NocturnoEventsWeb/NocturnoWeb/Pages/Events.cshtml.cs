@@ -20,7 +20,7 @@ namespace NocturnoWeb.Pages
 
         public async Task OnGet()
         {
-            PastEvents = await _eventsService.GetEventsAsync();
+            PastEvents = await _eventsService.GetPastEventsAsync();
             FutureEvents = await _eventsService.GetFutureEventsAsync();
         }
     }

@@ -61,5 +61,10 @@ namespace NocturnoWeb.Services
         {
             return await _ctx.Artists.FirstOrDefaultAsync(x => x.Id == id);
         }
+
+        public async Task<List<FeaturedArtist>> GetFeaturedArtists()
+        {
+            return await _ctx.Artists.AsNoTracking().Select(x => new FeaturedArtist{ Id = x.Id, ImageUri = x.ImageUri, Name = x.Name }).ToListAsync();
+        }
     }
 }
